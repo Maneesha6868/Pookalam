@@ -1,0 +1,416 @@
+import turtle
+
+t=turtle.Turtle()
+t.speed("fastest")
+t.pencolor("#000000")
+
+def position(x,y):
+    t.pu()  #pu stands for penup
+    t.goto(x,y)
+    t.pd()  #pd stands for pendown
+
+
+def fillcircle(col,rad):
+    t.pd()
+    t.fillcolor(col)
+    t.begin_fill()
+    t.circle(rad)
+    t.end_fill()
+    t.pu()
+
+def flower(number):
+   t.pensize(1)
+  
+   t.pd()
+   for i in range(number):
+      t.circle(20,60)
+      t.left(100)
+      t.circle(20,60)
+   t.pu()
+
+def diamond(col):
+    t.fillcolor(col)
+    t.pencolor("black")
+    t.begin_fill()
+    t.seth(300)
+    t.forward(10)
+    t.seth(210)
+    t.forward(10)
+    t.seth(120)
+    t.forward(10)
+    t.seth(30)
+    t.forward(10)
+    t.end_fill()
+
+position(0,0)
+t.shape("circle")
+t.color("#FF4D00")
+move=15
+
+for i in range(24):
+    t.pu()
+    t.forward(280)
+    
+    t.stamp()
+    t.home()
+    t.right(move)
+    move=move+15
+
+position(0,-276)
+t.pencolor("#000000")
+fillcircle("#000000",276)
+
+
+position(0,-260)
+t.pencolor("#008B8B")
+fillcircle("#008B8B",260)
+
+
+position(0,0)
+t.shape("classic")
+t.color("#000000")
+move=7.5
+
+for i in range(48):
+    t.pu()
+    t.forward(250)
+    t.stamp()
+    t.home()
+    t.right(move)
+    move=move+7.5
+
+
+position(0,-237)
+t.pencolor("#E5A46E")
+fillcircle("#E5A46E",237)
+
+position(0,-222)
+t.pencolor("#FEE227")
+fillcircle("#FEE227",222)
+
+position(0,-210)
+t.pencolor("#FDEE87")
+fillcircle("#FDEE87",210)
+
+position(0,-180)
+fillcircle("#78081C",180)
+
+#banana leaves
+position(0,0)
+t.pensize(3)
+t.pd()
+t.pencolor("green")
+
+for i in range(9):
+    t.begin_fill()
+    t.fillcolor("green")
+    t.circle(145,98)
+    t.left(85)
+    t.circle(145,98)
+    t.right(80)
+    t.end_fill()
+
+t.pu()
+t.pd()
+position(0,0)
+t.pencolor("#FFA500")
+
+t.seth(90)   #seth stands for setheading
+t.forward(200)
+position(0,0)
+t.right(40)
+t.forward(200)
+position(0,0)
+t.right(35)
+t.forward(200)
+position(0,0)
+t.right(40)
+t.forward(200)
+position(0,0)
+t.right(40)
+t.forward(200)
+position(0,0)
+t.right(40)
+t.forward(200)
+position(0,0)
+t.right(35)
+t.forward(200)
+position(0,0)
+t.right(43)
+t.forward(200)
+position(0,0)
+t.right(43)
+t.forward(200)
+
+
+t.pu()
+
+t.pencolor("#7BB662")
+position(115,110)
+fillcircle("#7BB662",160)
+
+
+position(0,0)
+t.pd()
+color=["#FDD017","#FF8400"]
+t.pensize(30)
+
+for i in range(36):
+    t.pencolor(color[i%2])
+    t.forward(130)
+    position(0,0)
+    t.right(10)
+
+
+
+
+t.pensize(2)
+t.pencolor("#D2F7FF")
+position(70,70)
+fillcircle("#D2F7FF",100)
+
+#Mahabali
+#MahabaliCrown
+t.pencolor("#000000")
+position(-1,-50)
+t.seth(0)
+fillcircle("yellow",60)
+
+position(-1,-50)
+t.seth(0)
+fillcircle("#D2F7FF",50)
+
+position(-1,18)
+fillcircle("yellow",10)
+
+position(-1,-50)
+t.seth(0)
+fillcircle("yellow",40)
+
+position(-40,-40)
+fillcircle("#FDC89A",10)
+
+position(-45,-45)
+fillcircle("yellow",5)
+
+position(40,-40)
+fillcircle("#FDC89A",10)
+
+position(45,-45)
+fillcircle("yellow",5)
+
+position(64,-77)
+t.seth(90)
+
+t.begin_fill()
+t.fillcolor("#FDC89A")
+
+for i in range(2):
+    t.left(50)
+    t.circle(100,80)
+    t.seth(270)
+
+t.end_fill()
+
+
+t.begin_fill()
+t.fillcolor("#FDC89A")
+position(-40,-20)
+
+t.seth(270)
+t.forward(25)
+
+t.circle(40,180)
+t.forward(25)
+t.circle(20,180)
+t.seth(90)
+t.circle(20,180)
+t.end_fill()
+
+
+
+t.fillcolor("blue")
+position(-1,54)
+t.begin_fill()
+t.right(30)
+
+t.forward(13)
+t.seth(270)
+t.circle(8,180)
+t.left(40)
+t.forward(16)
+t.end_fill()
+
+position(7,19)
+fillcircle("red",8)
+
+position(25,13)
+fillcircle("red",5)
+
+position(-17,13)
+fillcircle("red",5)
+
+position(-53,13)
+fillcircle("red",3)
+
+position(-40,40)
+fillcircle("red",3)
+
+position(-20,55)
+fillcircle("red",3)
+
+position(5,63)
+fillcircle("red",5)
+
+position(27,55)
+fillcircle("red",3)
+
+position(45,40)
+fillcircle("red",3)
+
+position(57,13)
+fillcircle("red",3)
+
+#MahabaliEyes
+t.fillcolor("black")
+position(-20,-23)
+
+t.begin_fill()
+t.seth(270)
+t.right(30)
+t.forward(11)
+t.seth(270)
+t.circle(5,180)
+t.left(31)
+t.forward(11)
+t.end_fill()
+
+position(20,-23)
+
+t.begin_fill()
+t.seth(270)
+t.right(30)
+t.forward(11)
+t.seth(270)
+t.circle(5,180)
+t.left(31)
+t.forward(11)
+t.end_fill()
+
+#MahabaliNose
+position(1,-35)
+t.seth(270)
+t.right(30)
+t.forward(16)
+t.seth(0)
+t.forward(10)
+
+#MahabaliMoustache
+t.fillcolor("black")
+t.seth(325)
+position(-36,-57)
+t.begin_fill()
+t.circle(20,90)
+t.circle(-10,50)
+t.circle(-10,50)
+t.circle(20,90)
+t.seth(250)
+t.circle(-20,122)
+t.seth(240)
+t.circle(-20,122)
+t.end_fill()
+t.pu()
+
+
+#MahabaliNecklace
+position(26,-77)
+t.begin_fill()
+t.fillcolor("yellow")
+t.left(155)
+t.forward(24)
+
+
+position(20,-79)
+
+t.forward(24)
+t.end_fill()
+
+position(-28,-75)
+t.begin_fill()
+t.fillcolor("yellow")
+t.left(10)
+t.forward(26)
+
+position(-22,-76)
+t.left(2)
+t.forward(30)
+t.end_fill()
+
+position(-5,-20)
+t.seth(270)
+t.pensize(3)
+t.pencolor("red")
+t.forward(10)
+t.circle(5,180)
+t.forward(10)
+
+position(90,10)
+diamond("orange")
+
+position(70,-30)
+diamond("#FFD801")
+
+position(65,60)
+diamond("purple")
+
+position(-5,90)
+diamond("#E0115F")
+
+position(-70,60)
+diamond("navy blue")
+
+position(-80,10)
+diamond("orange")
+
+position(-70,-40)
+diamond("#043927")
+
+position(17,-200)
+t.pencolor("#702963")
+flower(20)
+
+position(148,-138)
+t.pencolor("#D31A38")
+flower(20)
+
+position(200,-10)
+t.pencolor("#0197F6")
+flower(20)
+
+position(170,100)
+t.pencolor("#702963")
+flower(20)
+
+position(70,185)
+t.pencolor("#D31A38")
+flower(20)
+
+position(-80,186)
+t.pencolor("#0197F6")
+flower(20)
+
+position(-190,85)
+t.pencolor("#702963")
+flower(20)
+
+position(-200,-60)
+t.pencolor("#D31A38")
+flower(20)
+
+position(-110,-180)
+t.pencolor("#0197F6")
+flower(20)
+
+position(-400,400)
+
+turtle.done()
